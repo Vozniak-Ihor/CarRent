@@ -9,15 +9,11 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist/es/constants';
-import { authSlice } from './auth/slice';
+
 import advertReducer from './advertSlice';
 
 // Configure persist options for auth slice
-const authPersistConfig = {
-  key: 'authRoot',
-  storage,
-  whitelist: ['token'], // Specify which parts of the auth slice to persist
-};
+
 
 // Configure persist options for advert slice
 const advertPersistConfig = {
@@ -27,13 +23,13 @@ const advertPersistConfig = {
 };
 
 // Create persisted reducers
-const persistedAuthReducer = persistReducer(authPersistConfig, authSlice.reducer);
+
 const persistedAdvertReducer = persistReducer(advertPersistConfig, advertReducer);
 
 // Create the Redux store
 export const store = configureStore({
   reducer: {
-    auth: persistedAuthReducer,
+
     advert: persistedAdvertReducer,
   },
   middleware: getDefaultMiddleware => {
