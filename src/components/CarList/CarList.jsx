@@ -1,5 +1,5 @@
 import css from './CarList.module.css';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState,} from 'react';
 import fetchData from '../../Services/fetchData';
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, removeFavorite } from '../../redux/advertSlice';
