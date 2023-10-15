@@ -1,30 +1,30 @@
 {
   "files": {
     "main.css": "/CarRent/static/css/main.846de31a.css",
-    "main.js": "/CarRent/static/js/main.ceb93b32.js",
+    "main.js": "/CarRent/static/js/main.aff9fc86.js",
     "static/css/936.09dd1910.chunk.css": "/CarRent/static/css/936.09dd1910.chunk.css",
-    "static/js/936.67d925fd.chunk.js": "/CarRent/static/js/936.67d925fd.chunk.js",
-    "static/css/839.7787f168.chunk.css": "/CarRent/static/css/839.7787f168.chunk.css",
-    "static/js/839.650b5e2b.chunk.js": "/CarRent/static/js/839.650b5e2b.chunk.js",
-    "static/css/603.7a973ffa.chunk.css": "/CarRent/static/css/603.7a973ffa.chunk.css",
-    "static/js/603.8f044f0c.chunk.js": "/CarRent/static/js/603.8f044f0c.chunk.js",
-    "static/js/279.98b18e7a.chunk.js": "/CarRent/static/js/279.98b18e7a.chunk.js",
+    "static/js/936.296ada80.chunk.js": "/CarRent/static/js/936.296ada80.chunk.js",
+    "static/css/839.5b181b8a.chunk.css": "/CarRent/static/css/839.5b181b8a.chunk.css",
+    "static/js/839.405a2907.chunk.js": "/CarRent/static/js/839.405a2907.chunk.js",
+    "static/css/21.b53d879e.chunk.css": "/CarRent/static/css/21.b53d879e.chunk.css",
+    "static/js/21.0d411991.chunk.js": "/CarRent/static/js/21.0d411991.chunk.js",
+    "static/js/279.f29672bb.chunk.js": "/CarRent/static/js/279.f29672bb.chunk.js",
     "index.html": "/CarRent/index.html",
-    "static/media/normal.svg": "/CarRent/static/media/normal.282d936f414f4c6884ab.svg",
-    "static/media/active.svg": "/CarRent/static/media/active.97847e9195943f61800c.svg",
+    "static/media/normal.svg": "/CarRent/static/media/normal.282d936f414f4c6884ab9306a91dad67.svg",
+    "static/media/active.svg": "/CarRent/static/media/active.97847e9195943f61800c97807e735d4f.svg",
     "static/media/x.svg": "/CarRent/static/media/x.f3cbdd58dc25ca7cbb3d242106b56fb9.svg",
     "main.846de31a.css.map": "/CarRent/static/css/main.846de31a.css.map",
-    "main.ceb93b32.js.map": "/CarRent/static/js/main.ceb93b32.js.map",
+    "main.aff9fc86.js.map": "/CarRent/static/js/main.aff9fc86.js.map",
     "936.09dd1910.chunk.css.map": "/CarRent/static/css/936.09dd1910.chunk.css.map",
-    "936.67d925fd.chunk.js.map": "/CarRent/static/js/936.67d925fd.chunk.js.map",
-    "839.7787f168.chunk.css.map": "/CarRent/static/css/839.7787f168.chunk.css.map",
-    "839.650b5e2b.chunk.js.map": "/CarRent/static/js/839.650b5e2b.chunk.js.map",
-    "603.7a973ffa.chunk.css.map": "/CarRent/static/css/603.7a973ffa.chunk.css.map",
-    "603.8f044f0c.chunk.js.map": "/CarRent/static/js/603.8f044f0c.chunk.js.map",
-    "279.98b18e7a.chunk.js.map": "/CarRent/static/js/279.98b18e7a.chunk.js.map"
+    "936.296ada80.chunk.js.map": "/CarRent/static/js/936.296ada80.chunk.js.map",
+    "839.5b181b8a.chunk.css.map": "/CarRent/static/css/839.5b181b8a.chunk.css.map",
+    "839.405a2907.chunk.js.map": "/CarRent/static/js/839.405a2907.chunk.js.map",
+    "21.b53d879e.chunk.css.map": "/CarRent/static/css/21.b53d879e.chunk.css.map",
+    "21.0d411991.chunk.js.map": "/CarRent/static/js/21.0d411991.chunk.js.map",
+    "279.f29672bb.chunk.js.map": "/CarRent/static/js/279.f29672bb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.846de31a.css",
-    "static/js/main.ceb93b32.js"
+    "static/js/main.aff9fc86.js"
   ]
 }
