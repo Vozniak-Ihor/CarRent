@@ -1,15 +1,18 @@
 import css from './CarList.module.css';
-import React, { useEffect, useState,} from 'react';
+import React, { useEffect, useState } from 'react';
 import fetchData from '../../Services/fetchData';
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, removeFavorite } from '../../redux/advertSlice';
 import Modal from 'components/Modal/Modal';
+
+import iconAdd from '../../images/active.svg';
+import iconRemove from '../../images/normal.svg';
+
 const CarList = () => {
   const [adverts, setAdverts] = useState([]);
   const [page, setPage] = useState(1);
-  // const isFirstRender = useRef(true);
-  const favoriteCarArr = useSelector(state => state.advert.items);
-  //  const checkbox = useSelector(state => state.advert.items);
+  const favorites = useSelector(state => state.advert.items);
+  const dispatch = useDispatch();
   const [modalActive, setModalActive] = useState(true);
 
   const getData = page => {
@@ -23,11 +26,6 @@ const CarList = () => {
   };
 
   useEffect(() => {
-    // if (isFirstRender.current) {
-    //   isFirstRender.current = false;
-    //   return;
-    // }
-
     getData(page);
   }, [page]);
 
@@ -35,13 +33,12 @@ const CarList = () => {
     setPage(prevPage => prevPage + 1);
   };
 
-  const dispatch = useDispatch();
-
-  const inFavorite = item => {
-    if (favoriteCarArr.includes(item)) {
-      dispatch(removeFavorite(item.id));
+  const toggleFavorite = ad => {
+    const isFavorite = favorites.some(fav => fav.id === ad.id);
+    if (isFavorite) {
+      dispatch(removeFavorite(ad));
     } else {
-      dispatch(addFavorite(item));
+      dispatch(addFavorite(ad));
     }
   };
 
@@ -55,19 +52,22 @@ const CarList = () => {
       <div className={css.catalogConteiner}>
         {adverts.map(info => (
           <div className={css.cards} key={info.id}>
-            <div className={css.carImgCheckbox}>
+            <div className={css.carImgBtn}>
               <img
                 className={css.carImg}
                 src={info.img}
                 alt={`${info.make} ${info.model}, ${info.year}`}
               />
-
-              <input
-                className={css.checkbox}
-                onChange={() => inFavorite(info)}
-                type="checkbox"
-                checked={favoriteCarArr.includes(info)}
-              />
+              <button
+                onClick={() => toggleFavorite(info)}
+                className={css.carFavoriteBtn}
+              >
+                {favorites.some(fav => fav.id === info.id) ? (
+                  <img src={iconAdd} alt="icon add" />
+                ) : (
+                  <img src={iconRemove} alt="icon remove" />
+                )}
+              </button>
             </div>
             <div className={css.carTitle}>
               <h3 className={css.carTitleMake}>
@@ -90,13 +90,17 @@ const CarList = () => {
             </button>
           </div>
         ))}
-        <button
-          onClick={handleLoadMore}
-          className={css.loadMoreButton}
-          type="button"
-        >
-          Load More
-        </button>
+        {console.log(adverts.length)}
+        {adverts.length <= 50 && (
+          <button
+            onClick={handleLoadMore}
+            className={css.loadMoreButton}
+            type="button"
+          >
+            Load More
+          </button>
+        )}
+
         <Modal
           active={modalActive}
           setActive={setModalActive}

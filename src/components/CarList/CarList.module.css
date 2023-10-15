@@ -93,36 +93,17 @@
     cursor: pointer;
    }
    
-   .carImgCheckbox {
+   .carImgBtn {
     position: relative;
    }
-   
-   .checkbox {
+   .carFavoriteBtn {
     position: absolute;
-    right: 16px;
-    top: 16px;
-    height: 0;
-   }
-   
-   input[type='checkbox']::before {
-    content: '';
-    position: absolute;
+    border: none;
+    top: 14px;
+    right: 14px;
+    background: transparent;
     cursor: pointer;
-    width: 18px;
-    height: 18px;
-   
-    background-image: url(../../images/normal.svg);
-   }
-   
-   input[type='checkbox']:checked::after {
-    content: '';
-    position: absolute;
-    cursor: pointer;
-    width: 18px;
-    height: 18px;
-    background-image: url(../../images/active.svg);
-    visibility: visible;
-   }
+  }
    
    .loadMoreButton {
     color: #3470ff;

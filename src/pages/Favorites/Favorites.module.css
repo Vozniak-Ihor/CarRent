@@ -1,0 +1,36 @@
+.message {
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffcc00;
+  border: 2px solid #ffcc00;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    width: 20vw;
+    margin: 20px auto;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s;
+  }
+  
+
+.link:hover {
+  background-color: #47a048;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}

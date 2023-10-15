@@ -9,10 +9,9 @@ const advertSlice = createSlice({
  reducers: {
   addFavorite: (state, action) => {
    state.items.push(action.payload);
-   console.log(action.payload.id)
   },
   removeFavorite: (state, action) => {
-   state.items = state.items.filter(item => item.id !== action.payload);
+   state.items = state.items.filter(item => item.id !== action.payload.id);
   },
  },
 });

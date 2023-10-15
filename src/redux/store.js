@@ -12,24 +12,19 @@ import {
 
 import advertReducer from './advertSlice';
 
-// Configure persist options for auth slice
-
-
-// Configure persist options for advert slice
 const advertPersistConfig = {
   key: 'advertRoot',
   storage,
-  whitelist: ['items'], // Specify which parts of the advert slice to persist
+  whitelist: ['items'],
 };
 
-// Create persisted reducers
+const persistedAdvertReducer = persistReducer(
+  advertPersistConfig,
+  advertReducer
+);
 
-const persistedAdvertReducer = persistReducer(advertPersistConfig, advertReducer);
-
-// Create the Redux store
 export const store = configureStore({
   reducer: {
-
     advert: persistedAdvertReducer,
   },
   middleware: getDefaultMiddleware => {
@@ -41,5 +36,5 @@ export const store = configureStore({
   },
 });
 
-// Create the persistor for hydration
+
 export const persistor = persistStore(store);
